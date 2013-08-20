@@ -9,9 +9,13 @@ import java.util.ArrayList;
  * @author catchers
  *
  */
-public class Task {
+public class Task extends Commentable { 
 	String name;
-	ArrayList<Comment> comments;
+	TaskType type;
+	TaskState state;
+	ArrayList<User> users;
 	ArrayList<Task> childs;
 	ArrayList<Task> parents;
+	ArrayList<Task> dependecies;
+	ArrayList<TaskDetail> details;
 }
