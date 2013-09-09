@@ -1,7 +1,9 @@
 package org.catcher.jpa;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -14,6 +16,11 @@ public class Uzytkownik implements Serializable {
 	private int id;
 	private String imie;
 	private String nazwisko;
+	@ElementCollection
+	//@CollectionTable(name = "hedgehog_winter_addresses", joinColumns = @JoinColumn(name = "id"))
+	//@OrderColumn(name = "list_index")
+	//@IndexColumn(name = "list_index")
+	private List<AdresUzytkownika> adresy;
 	
 	public String getImie() {
 		return imie;

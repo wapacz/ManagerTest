@@ -5,6 +5,7 @@
 	<persistence-unit name="ManagerTest" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>org.catcher.jpa.Uzytkownik</class>
+		<class>org.catcher.jpa.AdresUzytkownika</class>
 		<properties>
 			<property name="hibernate.connection.username" value="jpatest" />
 			<property name="hibernate.connection.password" value="jpatest123" />
@@ -13,6 +14,7 @@
 				value="jdbc:mysql://192.168.15.10/jpadb?characterEncoding=utf8" />
 			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
 		</properties>
 	</persistence-unit>
 </persistence>
